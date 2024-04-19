@@ -111,7 +111,6 @@ class EliteJwt
                     "name" => $user->display_name,
                     "username" => $user->user_login,
                     "email" => $user->user_email,
-                    "user" => ["id" => $user->ID]
                 ];
                 return ["token" => $this->elite_encode($this->issuer, $user_data)];
             } else {
