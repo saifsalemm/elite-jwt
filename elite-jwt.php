@@ -178,8 +178,10 @@ class EliteJwt
     }
 }
 
-if (class_exists('EliteJwt'))
+if (class_exists('EliteJwt')) {
+    global $elite_jwt;
     $elite_jwt = new EliteJwt();
+}
 
 
 // activation
