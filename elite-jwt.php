@@ -42,11 +42,8 @@ class EliteJwt
         date_default_timezone_set('Africa/Cairo');
         $this->issuedAt = time();
 
-        // Define token validity (3600 seconds = 1 hour)
-        $this->expire = $this->issuedAt + 3600 * 24 * 7;
-
-        // Set a strong secret or signature for JWT
-        // $this->secrect = ELITE_JWT_SECRET;
+        // Define token validity
+        $this->expire = $this->issuedAt + 60 * 60 * 24 * 7;
 
         $this->secrect = ELITE_JWT_SECRET;
         $this->issuer = ELITE_JWT_ISSUER;
