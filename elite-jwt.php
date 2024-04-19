@@ -112,7 +112,7 @@ class EliteJwt
                     "username" => $user->user_login,
                     "email" => $user->user_email,
                 ];
-                return ["token" => $this->elite_encode($this->issuer, $user_data)];
+                return array_merge($user_data, ["token" => $this->elite_encode($this->issuer, $user_data)]);
             } else {
                 return new WP_Error('invalid_params', 'Invalid username or password');
             }
