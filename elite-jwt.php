@@ -124,8 +124,8 @@ class EliteJwt
     function generate_elite_jwt_endpoint()
     {
         register_rest_route(
-            'elite/v1',
-            '/generate-token',
+            'jwt/v1',
+            '/generate',
             array(
                 'methods'  => 'POST',
                 'callback' => function ($request) {
@@ -152,8 +152,8 @@ class EliteJwt
     function validate_elite_jwt_endpoint()
     {
         register_rest_route(
-            'elite/v1',
-            '/validate-token',
+            'jwt/v1',
+            '/validate',
             array(
                 'methods'  => 'POST',
                 'callback' => function ($request) {
